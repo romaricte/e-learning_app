@@ -1,10 +1,13 @@
 library intl_phone_field;
 
 import 'dart:async';
+import 'package:e_learning/core/utils/image_constant.dart';
+import 'package:e_learning/widgets/custom_image_view.dart';
+import 'package:e_learning/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_elearning_app/core/app_export.dart';
-import '../../widgets/custom_text_form_field.dart';
+import 'package:e_learning/theme/theme_helper.dart';
+import 'package:e_learning/core/utils/size_utils.dart';
 import './countries.dart';
 import './phone_number.dart';
 import 'country_picker_dialog.dart';
@@ -375,7 +378,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
   }
 
   Container _buildFlagsButton() {
-    return Container(
+    return  Container(
       margin: widget.flagsButtonMargin,
       child: DecoratedBox(
         decoration: widget.dropdownDecoration,

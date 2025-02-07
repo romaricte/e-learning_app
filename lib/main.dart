@@ -1,7 +1,23 @@
+import 'package:e_learning/core/utils/initial_bindings.dart';
+import 'package:e_learning/core/utils/logger.dart';
+import 'package:e_learning/routes/app_routes.dart';
+import 'package:e_learning/theme/theme_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart' show kReleaseMode;
+import 'package:get/get.dart';
 
 void main() {
+
+  WidgetsFlutterBinding.ensureInitialized();
+   SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]).then((value) {
+    Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
+    runApp(MyApp());
+  });
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -10,38 +26,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-     
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return GetMaterialApp(
+       debugShowCheckedModeBanner: false,
+      theme: theme,
+      // translations: AppLocalization(),
+      locale: Get.deviceLocale, //for setting localization strings
+      // fallbackLocale: Locale('en', 'US'),
+      title: 'e_learning',
+      initialBinding: InitialBindings(),
+      initialRoute: AppRoutes.initialRoute,
+      getPages: AppRoutes.pages,
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter Demo'),
-      ),
-      body: Center(
-        child: Text('Hello, world!'),
-      ),
-    );
-  }
-}
