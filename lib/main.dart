@@ -31,11 +31,12 @@ class MyApp extends StatelessWidget {
       theme: theme,
        translations: AppLocalization(),
       locale: Get.deviceLocale, //for setting localization strings
-      fallbackLocale: Locale('fr', 'FR'),
+      fallbackLocale: const Locale('fr', 'FR'),
       title: 'e_learning',
       initialBinding: InitialBindings(),
       initialRoute: AppRoutes.initialRoute,
       getPages: AppRoutes.pages,
+
 
     );
   }

@@ -10,16 +10,16 @@ class Onboarding1Model {
     return [
       Learningframe1ItemModel(
           ImageConstant.imgOnboarding1,
-          "Learn new skills and advance your career with learning",
-          "Electronic learning, is the delivery of learning and training through digital resources."),
+          "Apprenez de nouvelles compétences et progressez dans votre carrière avec l'apprentissage",
+          "L'apprentissage électronique, est la livraison de l'apprentissage et de la formation grâce aux ressources numériques."),
       Learningframe1ItemModel(
           ImageConstant.imgOnboarding2,
-          "The most convenient and effective way to learn.",
-          "Electronic learning, is the delivery of learning and training through digital resources."),
+          "Le moyen le plus pratique et efficace pour apprendre.",
+          "L'apprentissage électronique, est la livraison de l'apprentissage et de la formation grâce aux ressources numériques."),
       Learningframe1ItemModel(
           ImageConstant.imgOnboarding3,
-          "Learn at your own time, with digital learning.",
-          "Electronic learning, is the delivery of learning and training through digital resources."),
+          "Apprenez à votre propre rythme, avec l'apprentissage numérique.",
+          "L'apprentissage électronique, est la livraison de l'apprentissage et de la formation grâce aux ressources numériques."),
     ];
   }
 }
