@@ -1,85 +1,102 @@
-final Map<String, String> frFR = {
+final Map<String, String> enEN = {
   // Splash Screen Screen
   "lbl_e_learning_app": "E-learning app",
 
   // 01 Onboarding Screen Screen
   "msg_electronic_learning":
-      "L'apprentissage électronique, est la livraison de l'apprentissage \net de la formation grâce aux ressources numériques.",
+      "Electronic learning, is the delivery of learning and training through digital resources.",
   "msg_learn_new_skills":
-      "Apprenez de nouvelles compétences et progressez dans votre carrière avec l'apprentissage",
+      "Learn new skills and progress in your career with learning",
+
 
   // 01 Onboarding Screen One Screen
-    "msg_the_most_convenient": "Le moyen le plus pratique et efficace pour apprendre.",
+    "msg_the_most_convenient": "The most convenient and effective way to learn.",
+
 
   // 03 Onboarding Screen Screen
-  "lbl_get_started": "Commencer",
-  "msg_learn_at_your_own": "Apprenez à votre propre rythme, avec l'apprentissage numérique.",
+  "lbl_get_started": "Start",
+  "msg_learn_at_your_own": "Learn at your own pace, with digital learning.",
+
 
   // 02 Log In Screen wirh error Screen
-  "msg_please_enter_a_valid": "Veuillez entrer une adresse email valide",
-  "msg_please_enter_a_valid2": "Veuillez entrer un mot de passe valide",
+  "msg_please_enter_a_valid": "Please enter a valid email address",
+  "msg_please_enter_a_valid2": "Please enter a valid password",
+
 
   // 04 Sign up Screen
-  "lbl_full_name": "Nom et prénom",
-  "lbl_sign_in": "Connexion",
-  "msg_already_have_an": "Vous avez déjà un compte ? Connexion",
-  "msg_already_have_an2": "Vous avez déjà un compte ? ",
+  "lbl_full_name": "Full name",
+  "lbl_sign_in": "Sign in",
+  "msg_already_have_an": "Already have an account? Sign in",
+  "msg_already_have_an2": "Already have an account? ",
   "msg_join_the_revolution":
-      "Rejoignez la révolution et soyez une partie de quelque chose de plus grand.",
+
+      "Join the revolution and be part of something bigger.",
+
 
   // 05 Forgot password Screen
   "lbl_forgot_password": "Mot de passe oublié", "lbl_send": "Envoyer",
 
   // 06 Verification Screen
-  "lbl_code_sent_to": "Code envoyé à ",
-  "lbl_resend_now": "renvoyer maintenant",
-  "lbl_verification": "Vérification",
-  "lbl_verify": "Vérifier",
-  "msg_code_sent_to_ro": "Code envoyé à ronaldrichards@gmail.com",
-  "msg_don_t_receive_an": "Ne recevez pas de code ? renvoyer maintenant",
-  "msg_don_t_receive_an2": "Ne recevez pas de code ? ",
+  "lbl_code_sent_to": "Code sent to ",
+  "lbl_resend_now": "Resend now",
+  "lbl_verification": "Verification",
+  "lbl_verify": "Verify",
+
+  "msg_code_sent_to_ro": "Code sent to ronaldrichards@gmail.com",
+  "msg_don_t_receive_an": "Don't receive an code? Resend now",
+  "msg_don_t_receive_an2": "Don't receive an code? ",
+
 
   // 07 Reset password Screen
-  "lbl_new_password": "Nouveau mot de passe", "lbl_reset_password": "Réinitialiser le mot de passe",
-  "msg_confirm_password": "Confirmer le mot de passe",
+  "lbl_new_password": "New password", "lbl_reset_password": "Reset password",
+  "msg_confirm_password": "Confirm password",
+
 
   // 08 Reset password success Screen
-  "msg_password_reset_successfully": "Mot de passe réinitialisé avec succès",
+  "msg_password_reset_successfully": "Password reset successfully",
+
 
   // 01 Home Screen Screen
-  "lbl_book_now": "Réserver maintenant",
-  "lbl_popular_courses": "Cours populaires",
-  "lbl_welcome_back": "Bienvenue de retour,",
-  "msg_featured_courses": "Cours en vedette",
-  "msg_learn_new_skills2": "Apprenez de nouvelles compétences, progressez dans votre carrière",
-  "msg_master_the_art_of": "Maîtrisez l'art de la programmation avec nos cours en ligne",
-  "msg_online_courses_that": "Cours en ligne qui correspondent à votre emploi du temps",
-  "msg_popular_instructors": "Instructeurs populaires",
+  "lbl_book_now": "Book now",
+  "lbl_popular_courses": "Popular courses",
+  "lbl_welcome_back": "Welcome back,",
+  "msg_featured_courses": "Featured courses",
+
+  "msg_learn_new_skills2": "Learn new skills, progress in your career",
+  "msg_master_the_art_of": "Master the art of programming with our online courses",
+  "msg_online_courses_that": "Online courses that match your schedule",
+
+  "msg_popular_instructors": "Popular instructors",
   "msg_ronald_richards": "Romadev tene 👋🏻",
   "msg_senior_ui_designer": "Senior ui designer ",
+
   "msg_welcome_back_ronald": "Bienvenue de retour, \nRomadev tene 👋🏻",
 
   // 02 Categories Screen
-  "lbl_cloud_security": "Sécurité cloud",
-  "lbl_data_analysis": "Analyse des données",
-  "lbl_machine_learn": "Apprentissage automatique",
+  "lbl_cloud_security": "Cloud security",
+  "lbl_data_analysis": "Data analysis",
+  "lbl_machine_learn": "Machine learning",
   "lbl_marketing": "Marketing",
-  "lbl_physics": "Physique",
-  "lbl_stock_market": "Bourse",
+  "lbl_physics": "Physics",
+  "lbl_stock_market": "Stock market",
+
 
   // 03 Featured course Screen
-  "lbl_featured_course": "Cours en vedette",
+  "lbl_featured_course": "Featured course",
+
 
   // 04 Popular Courses Screen
   "lbl_annette_black": "Annette black",
   "lbl_jacob_jones": "Jacob jones",
   "lbl_popular_course": "Popular course",
   "msg_elearning_a_convenient":
-      "L'apprentissage électronique: une façon pratique et efficace d'apprendre",
-  "msg_the_best_way_to": "La meilleure façon de rester à jour sur les dernières tendances",
-  "msg_the_way_to_learn": "La façon de nouvelles compétences et de progresser dans votre carrière",
+      "E-learning: a convenient and effective way to learn",
+
+  "msg_the_best_way_to": "The best way to stay up to date on the latest trends",
+  "msg_the_way_to_learn": "The way to learn new skills and progress in your career",
   "msg_the_way_to_stay":
-      "La façon de rester compétitif sur le marché mondial",
+      "The way to stay competitive on the global market",
+
 
   // 05 Course Details About  Screen
   "lbl_1_2": "1 / 2",
@@ -112,12 +129,14 @@ final Map<String, String> frFR = {
   "msg_total_payment_amount": "Total payment amount",
 
   // 09 PRomo code Screen
-  "lbl_coupon_code": "Code promo",
+  "lbl_coupon_code": "Coupon code",
   "lbl_e_learn": "E-LEARN",
-  "lbl_enter_here": "Entrez ici..",
+  "lbl_enter_here": "Enter here..",
   "lbl_holidaydeal": "HOLIDAYDEAL",
   "lbl_nftreds": "NFTREDS",
-  "msg_have_a_coupon_code": "Avez-vous un code promo",
+  "msg_have_a_coupon_code": "Have a coupon code",
+
+
 
   // 10 Payment method Screen
   "lbl_pay_now": "Pay now", "lbl_payment_method": "Payment method",
@@ -277,8 +296,9 @@ final Map<String, String> frFR = {
       "Sed sollicitudin nisi mollis libero consectetur rutrum. Nam maximus mollis nisl quis facilisis. Integer fermentum commodo nibh. Ut mollis tincidunt hendrerit. Duis ipsum velit, maximus sed commodo imperdiet, dapibus id velit. Nullam in maximus enim. Pellentesque vulputate nisi sit amet lacus pulvinar finibus. Nullam sit amet enim id nibh volutpat gravida vitae in orci. Quisque nibh nisl, congue in ex a, ultricies ultrices metus. Maecenas egestas eu ligula sed commodo. Vivamus sollicitudin risus quam",
 
   // 09 Log out Screen
-  "lbl_cancel": "Annuler",
-  "msg_are_you_sure_you": "Êtes-vous sûr de vouloir vous déconnecter?",
+  "lbl_cancel": "Cancel",
+  "msg_are_you_sure_you": "Are you sure you want to log out?",
+
 
   // Common String
   "lbl_01": "01",
@@ -308,110 +328,122 @@ final Map<String, String> frFR = {
   "lbl_85_00": "\$85.00",
   "lbl_90_00": "\$90.00",
   "lbl_95_00": "\$95.00",
-  "lbl_add_new_card": "Ajouter une nouvelle carte",
+  "lbl_add_new_card": "Add new card",
   "lbl_albert_flores": "Albert flores",
   "lbl_apple_pay": "Apple pay",
-  "lbl_card_number": "Numéro de carte",
-  "lbl_categories": "Catégories",
+  "lbl_card_number": "Card number",
+  "lbl_categories": "Categories",
   "lbl_chat": "Chat",
+
   "lbl_coding": "Codage",
   "lbl_cody_fisher": "Cody fisher",
   "lbl_cordinator": "Cordinator",
   "lbl_courtney_henry": "Courtney henry",
   "lbl_cvv": "Cvv",
-  "lbl_designing": "Conception",
-  "lbl_email_address": "Adresse email",
+  "lbl_designing": "Designing",
+  "lbl_email_address": "Email address",
   "lbl_esther_howard": "Esther howard",
   "lbl_esther_howards": "Esther howards",
-  "lbl_expiry_date": "Date d'expiration",
+
+  "lbl_expiry_date": "Expiry date",
   "lbl_facebook": "Facebook",
-  "lbl_favorite": "Favoris",
+  "lbl_favorite": "Favorite",
   "lbl_finance": "Finance",
-  "lbl_go_to_home": "Aller à la maison",
-  "lbl_go_to_login": "Aller à la connexion",
+  "lbl_go_to_home": "Go to home",
+  "lbl_go_to_login": "Go to login",
   "lbl_google": "Google",
+
   "lbl_google_pay": "Google pay",
   "lbl_guy_hawkins": "Guy hawkins",
-  "lbl_home": "Accueil",
-  "lbl_instructor": "Instructeur",
+  "lbl_home": "Home",
+  "lbl_instructor": "Instructor",
   "lbl_jenny_wilson": "Jenny wilson",
-  "lbl_learn_more": "En savoir plus.",
-  "lbl_log_in": "Connexion",
-  "lbl_log_out": "Déconnexion",
+  "lbl_learn_more": "Learn more.",
+  "lbl_log_in": "Log in",
+
+  "lbl_log_out": "Log out",
   "lbl_maths": "Maths",
-  "lbl_my_cards": "Mes cartes",
-  "lbl_my_courses": "Mes cours",
-  "lbl_my_profile": "Mon profil",
-  "lbl_next": "Suivant",
+  "lbl_my_cards": "My cards",
+  "lbl_my_courses": "My courses",
+  "lbl_my_profile": "My profile",
+  "lbl_next": "Next",
   "lbl_notifications": "Notifications",
-  "lbl_password": "Mot de passe",
+
+  "lbl_password": "Password",
   "lbl_paypal": "Paypal",
-  "lbl_phone_number": "Numéro de téléphone",
-  "lbl_photography": "Photographie",
-  "lbl_privacy_policy": "Politique de confidentialité",
-  "lbl_profile": "Profil",
+  "lbl_phone_number": "Phone number",
+  "lbl_photography": "Photography",
+  "lbl_privacy_policy": "Privacy policy",
+  "lbl_profile": "Profile",
+
   "lbl_promo_code": "Code promo",
   "lbl_ralph_edwards": "Ralph edwards",
   "lbl_ralph_edwards2": "Ralph Edwards",
   "lbl_robert_fox": "Robert fox",
   "lbl_ronald_richards": "Ronald richards",
   "lbl_science": "Science",
-  "lbl_search": "Rechercher...",
-  "lbl_sign_up": "S'inscrire",
-  "lbl_skip": "Passer",
-  "lbl_view_all": "Voir tous",
+  "lbl_search": "Search...",
+  "lbl_sign_up": "Sign up",
+  "lbl_skip": "Skip",
+  "lbl_view_all": "View all",
   "lbl_visa": "Visa",
-  "lbl_why_using_figma": "Pourquoi utiliser figma",
-  "msg_brooklyn_simmons": "Rachael simmons",
-  "msg_creating_digital": "Création d'illustrations numériques",
-  "msg_customer_reviews": "Avis des clients",
-  "msg_designing_the_overall": "Conception du site web dans son ensemble",
-  "msg_don_t_have_an_account": "Pas de compte? S'inscrire",
-  "msg_don_t_have_an_account2": "Pas de compte? ",
+
+  "lbl_why_using_figma": "Why using figma",
+  "msg_brooklyn_simmons": "Brooklyn simmons",
+  "msg_creating_digital": "Creating digital illustrations",
+  "msg_customer_reviews": "Customer reviews",
+  "msg_designing_the_overall": "Designing the overall website",
+
+  "msg_don_t_have_an_account": "Don't have an account? Sign up",
+  "msg_don_t_have_an_account2": "Don't have an account? ",
   "msg_elearning_or_electronic":
-      "L'apprentissage électronique, ou l'apprentissage électronique, est la livraison de l'apprentissage \nand training through digital resources.",
+      "E-learning, or electronic learning, is the delivery of learning and training through digital resources.",
   "msg_enter_your_card":
-      "Entrez vos coordonnées de carte. Signal ne collecte ni stocke vos informations personnelles. En savoir plus.",
+      "Enter your card details. Signal does not collect or store your personal information. Learn more.",
   "msg_enter_your_card2":
-      "Entrez vos coordonnées de carte. Signal ne collecte ni stocke vos informations personnelles. ",
-  "msg_enter_your_email": "Entrez votre adresse email",
-  "msg_enter_your_password": "Entrez votre mot de passe",
-  "msg_forgot_password": "Mot de passe oublié ?",
+      "Enter your card details. Signal does not collect or store your personal information. ",
+
+  "msg_enter_your_email": "Enter your email address",
+  "msg_enter_your_password": "Enter your password",
+  "msg_forgot_password": "Forgot password?",
   "msg_forgot_your_password":
-      "Mot de passe oublié ? Voici comment retrouver rapidement et facilement votre \ncompte",
-  "msg_how_elearning_can": "Comment l'apprentissage électronique peut vous aider à atteindre vos objectifs",
-  "msg_how_to_become_an": "Comment devenir un concepteur UI/UX",
+      "Forgot your password? Here's how to quickly and easily find your account",
+  "msg_how_elearning_can": "How e-learning can help you achieve your goals",
+  "msg_how_to_become_an": "How to become a UI/UX designer",
   "msg_i_ve_been_really":
-      "Je suis vraiment impressionné par la qualité de l'enseignement et la commodité.",
-  "msg_learn_at_your_own2": "Apprenez à votre propre rythme, partout dans le monde",
-  "msg_learn_at_your_own3": "Apprenez à votre propre rythme, dans votre propre temps",
-  "msg_learn_faster_and": "Apprenez plus rapidement et plus efficacement avec l'apprentissage électronique",
-  "msg_learn_from_the_best": "Apprenez des meilleurs, partout dans le monde",
-  "msg_learn_new_skills3": "Apprenez de nouvelles compétences, progressez dans votre carrière",
+      "I'm really impressed by the quality of teaching and the convenience.",
+  "msg_learn_at_your_own2": "Learn at your own pace, anywhere in the world",
+  "msg_learn_at_your_own3": "Learn at your own pace, in your own time",
+  "msg_learn_faster_and": "Learn faster and more efficiently with e-learning",
+  "msg_learn_from_the_best": "Learn from the best, anywhere in the world",
+  "msg_learn_new_skills3": "Learn new skills, progress in your career",
   "msg_learn_the_skills":
-      "Apprenez les compétences dont vous avez besoin pour progresser dans votre carrière",
+      "Learn the skills you need to progress in your career",
   "msg_leslie_alexander": "Leslie Maffo",
-  "msg_log_in_to_your_account": "Connectez-vous à votre compte rapidement et en toute sécurité.",
-  "msg_machine_learning": "Apprentissage automatique",
-  "msg_or_continue_with": "Ou continuez avec",
+  "msg_log_in_to_your_account": "Log in to your account quickly and securely.",
+  "msg_machine_learning": "Machine learning",
+  "msg_or_continue_with": "Or continue with",
   "msg_ronaldrichard_gmail_com": "ronaldrichard@gmail.com",
   "msg_ronaldrichards_gmail_com": "ronaldrichards@gmail.com",
-  "msg_set_up_your_figma": "Configurez votre compte figma",
-  "msg_take_a_look_figma": "Prenez un aperçu de l'interface figma",
-  "msg_user_interface_for": "Interface utilisateur pour les sites web",
-  "msg_using_figma_plugins": "Utilisation des plugins figma",
-  "msg_working_with_frame": "Travail avec le cadre et la couche",
-  "msg_working_with_text": "Travail avec le texte et les grilles",
+  "msg_set_up_your_figma": "Set up your figma account",
+  "msg_take_a_look_figma": "Take a look at the figma interface",
+  "msg_user_interface_for": "User interface for websites",
+  "msg_using_figma_plugins": "Using figma plugins",
+  "msg_working_with_frame": "Working with the frame and layer",
+  "msg_working_with_text": "Working with text and grids",
   "msg_you_have_successfully":
-      "Vous avez changé avec succès votre mot de passe. \nveuillez utiliser votre nouveau mot de passe pour vous connecter ",
+      "You have successfully changed your password. \nPlease use your new password to log in",
+
 
 // Network Error String
-  "msg_network_err": "Erreur de réseau",
-  "msg_something_went_wrong": "Quelque chose s'est mal passé!",
+  "msg_network_err": "Network error",
+  "msg_something_went_wrong": "Something went wrong!",
+
 
 	// Validation Error String
-  "err_msg_please_enter_valid_email": "Veuillez entrer un email valide",
-  "err_msg_please_enter_valid_password": "Veuillez entrer un mot de passe valide",
-  "err_msg_please_enter_valid_text": "Veuillez entrer un texte valide",
-  "err_msg_please_enter_valid_number": "Veuillez entrer un nombre valide",
+  "err_msg_please_enter_valid_email": "Please enter a valid email",
+  "err_msg_please_enter_valid_password": "Please enter a valid password",
+  "err_msg_please_enter_valid_text": "Please enter a valid text",
+  "err_msg_please_enter_valid_number": "Please enter a valid number",
+
 };

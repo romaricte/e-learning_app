@@ -1,4 +1,6 @@
 
+import 'package:e_learning/presentation/log_in_screen/binding/log_in_binding.dart';
+import 'package:e_learning/presentation/log_in_screen/log_in_screen.dart';
 import 'package:e_learning/presentation/onboarding1_screen/binding/onboarding1_binding.dart';
 import 'package:e_learning/presentation/onboarding1_screen/onboarding1_screen.dart';
 import 'package:e_learning/presentation/onboarding_screen/binding/onboarding_binding.dart';
@@ -156,14 +158,14 @@ class AppRoutes {
         Onboarding1Binding(),
       ],
     ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: logInScreen,
-    //   page: () => LogInScreen(),
-    //   bindings: [
-    //     LogInBinding(),
-    //   ],
-    // ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: logInScreen,
+      page: () => const LogInScreen(),
+      bindings: [
+        LogInBinding(),
+      ],
+    ),
     // GetPage(
     //   transition: Transition.rightToLeft,
     //   name: logInScreenWirhErrorScreen,
