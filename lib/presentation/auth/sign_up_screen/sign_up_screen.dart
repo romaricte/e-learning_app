@@ -198,13 +198,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
  /// Section Widget
  Widget _buildLogIn() {
-  return CustomElevatedButton(
-      text: "lbl_sign_up".tr,
-      onPressed: () {
-        if(_formKey.currentState!.validate()){
-          controller.signUp();
-        }
-      });
+  return Obx(() => CustomElevatedButton(
+      text: controller.isLoading.value 
+          ? "Chargement..." 
+          : "lbl_sign_up".tr,
+      onPressed: controller.isLoading.value 
+          ? null 
+          : () {
+              if(_formKey.currentState!.validate()){
+                controller.signUp();
+              }
+            },
+
+     
+    ));
  }
 
  /// Section Widget

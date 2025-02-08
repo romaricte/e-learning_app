@@ -1,72 +1,72 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:e_learning/core/config/supabase_config.dart';
 import 'package:e_learning/core/error/exceptions.dart';
+import 'package:e_learning/services/auth_service.dart' as auth;
 
 class AuthRepository {
   final SupabaseClient _client = SupabaseConfig.client;
   
+
   // Ajoutez cette variable pour gérer le rate limiting
-  DateTime? _lastSignUpAttempt;
 
   Future<AuthResponse> signUp({
     required String email,
     required String password,
     required String fullName,
+    required String phoneNumber,
   }) async {
     try {
-      if (_lastSignUpAttempt != null) {
-        final difference = DateTime.now().difference(_lastSignUpAttempt!);
-        if (difference.inSeconds < 60) {
-          throw ServerException(
-            message: 'Veuillez patienter une minute avant de réessayer'
-          );
-        }
-      }
-      _lastSignUpAttempt = DateTime.now();
-
       final response = await _client.auth.signUp(
         email: email,
         password: password,
-        data: {'full_name': fullName}
+        data: {
+          'full_name': fullName,
+          'phone_number': phoneNumber
+        }
       );
       
-      if (response.user != null) {
-        try {
-          // Attendre que la session soit établie
-          await Future.delayed(const Duration(milliseconds: 500));
-          
-          // Utiliser la session courante pour l'insertion
-          final session = await _client.auth.currentSession;
-          if (session?.refreshToken != null) {
-            await _client.auth.setSession(session!.refreshToken!);
-          }
-          
-          await _client.from('profiles').insert({
-            'id': response.user!.id,
-            'full_name': fullName,
-            'email': email,
-            'created_at': DateTime.now().toIso8601String(),
-          });
-        } catch (e) {
-          print('Erreur détaillée lors de la création du profil: $e');
-          await _client.auth.admin.deleteUser(response.user!.id);
-          throw ServerException(
-            message: 'Erreur lors de la création du profil. Vérifiez la configuration de la base de données.'
-          );
-        }
+      if (response.user == null) {
+        throw ServerException(
+          message: 'Erreur lors de la création du compte utilisateur'
+        );
       }
       
       return response;
-    } on AuthException catch (e) {
+    } on auth.AuthException catch (e) {
       print('Erreur Supabase Auth: ${e.message}');
       if (e.message.contains('User already registered')) {
-        throw ServerException(message: 'Cet email est déjà utilisé');
+        throw auth.AuthException(
+          message: 'Un compte existe déjà avec cette adresse email',
+          code: 'email-already-exists'
+        );
+      } else if (e.message.contains('Invalid email')) {
+        throw auth.AuthException(
+          message: 'L\'adresse email n\'est pas valide',
+          code: 'invalid-email'
+        );
+      } else if (e.message.contains('Password should be at least 6 characters')) {
+        throw auth.AuthException(
+          message: 'Le mot de passe doit contenir au moins 6 caractères',
+          code: 'weak-password'
+        );
+      } else if (e.message.contains('rate limit')) {
+        throw auth.AuthException(
+          message: 'Trop de tentatives. Veuillez réessayer dans quelques minutes',
+          code: 'too-many-requests'
+        );
       }
-      throw ServerException(message: 'Erreur d\'authentification: ${e.message}');
+      
+      throw auth.AuthException(
+        message: 'Erreur d\'authentification: ${e.message}',
+        code: 'auth-error'
+      );
     } catch (e) {
       print('Erreur inattendue dans signUp: $e');
       if (e is ServerException) rethrow;
-      throw ServerException(message: 'Une erreur inattendue est survenue');
+      throw auth.AuthException(
+        message: 'Une erreur inattendue est survenue lors de l\'inscription',
+        code: 'unknown-error'
+      );
     }
   }
 

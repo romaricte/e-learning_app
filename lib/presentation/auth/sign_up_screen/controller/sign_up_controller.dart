@@ -29,6 +29,15 @@ class SignUpController extends GetxController {
         email: emailController.text,
         password: passwordController.text,
         fullName: fullNameController.text,
+        phoneNumber: phoneNumberController.text,
+      );
+      Get.snackbar(
+        'Succès',
+        'Inscription réussie ! Vous pouvez maintenant vous connecter.',
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.green[100],
+        colorText: Colors.green[900],
+        duration: const Duration(seconds: 3),
       );
       Get.toNamed(AppRoutes.logInScreen);
     } on AuthException catch (e) {
@@ -38,19 +47,7 @@ class SignUpController extends GetxController {
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.red[100],
         colorText: Colors.red[900],
-        duration: const Duration(seconds: 3),
-      );
-    } catch (e, stackTrace) {
-      print('Erreur inattendue lors de l\'inscription: $e');
-      print('StackTrace: $stackTrace');
-      
-      Get.snackbar(
-        'Erreur',
-        'Une erreur inattendue est survenue',
-        snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red[100],
-        colorText: Colors.red[900],
-        duration: const Duration(seconds: 3),
+        duration: const Duration(seconds: 5),
       );
     } finally {
       isLoading.value = false;
@@ -64,5 +61,6 @@ class SignUpController extends GetxController {
     fullNameController.clear();
     emailController.clear();
     passwordController.clear();
+    phoneNumberController.clear();
   }
 }

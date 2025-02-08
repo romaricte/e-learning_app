@@ -47,59 +47,95 @@ class AuthService extends GetxService {
     required String email,
     required String password,
     required String fullName,
+    required String phoneNumber,
   }) async {
     try {
       if (email.isEmpty || !GetUtils.isEmail(email)) {
         throw AuthException(
-          message: 'Adresse email invalide',
+          message: 'Veuillez entrer une adresse email valide',
           code: 'invalid-email'
         );
       }
 
+      if (password.isEmpty) {
+        throw AuthException(
+          message: 'Le mot de passe est requis',
+          code: 'empty-password'
+        );
+      }
       if (password.length < 6) {
         throw AuthException(
-          message: 'Le mot de passe doit contenir au moins 6 caractères',
+          message: 'Le mot de passe doit contenir au moins 8 caractères',
           code: 'weak-password'
         );
       }
+      // if (!password.contains(RegExp(r'[A-Z]'))) {
+      //   throw AuthException(
+      //     message: 'Le mot de passe doit contenir au moins une majuscule',
+      //     code: 'password-no-uppercase'
+      //   );
+      // }
+      // if (!password.contains(RegExp(r'[0-7]'))) {
+      //   throw AuthException(
+      //     message: 'Le mot de passe doit contenir au moins un chiffre',
+      //     code: 'password-no-digit'
+      //   );
+      // }
 
-      if (fullName.isEmpty) {
+      if (fullName.trim().isEmpty) {
         throw AuthException(
           message: 'Le nom complet est requis',
           code: 'invalid-fullname'
         );
       }
+      if (fullName.trim().length < 2) {
+        throw AuthException(
+          message: 'Le nom complet doit contenir au moins 2 caractères',
+          code: 'fullname-too-short'
+        );
+      }
+
+      if (phoneNumber.isNotEmpty) {
+        final phoneRegex = RegExp(r'^\+?[0-9]{8,15}$');
+        if (!phoneRegex.hasMatch(phoneNumber)) {
+          throw AuthException(
+            message: 'Le numéro de téléphone n\'est pas valide',
+            code: 'invalid-phone'
+          );
+        }
+      }
 
       await _authRepository.signUp(
-        email: email,
+        email: email.trim(),
         password: password,
-        fullName: fullName,
+        fullName: fullName.trim(),
+        phoneNumber: phoneNumber.trim(),
       );
-    } on AuthException {
+    } on AuthException catch (e) {
       rethrow;
     } catch (e) {
       print('Erreur détaillée dans AuthService.signUp:');
       print('Type d\'erreur: ${e.runtimeType}');
       print('Message d\'erreur: $e');
+      
       if (e is Error) {
         print('Stack trace: ${e.stackTrace}');
       }
-      
-      if (e.toString().contains('User already registered')) {
+
+      if (e.toString().contains('network')) {
         throw AuthException(
-          message: 'Cette adresse email est déjà utilisée',
-          code: 'email-already-in-use'
+          message: 'Erreur de connexion. Veuillez vérifier votre connexion internet',
+          code: 'network-error'
         );
-      } else if (e.toString().contains('ServerException')) {
-        print('Détails de ServerException: $e');
+      } else if (e.toString().contains('timeout')) {
         throw AuthException(
-          message: 'Erreur de connexion au serveur. Veuillez réessayer.',
-          code: 'server-error'
+          message: 'Le serveur ne répond pas. Veuillez réessayer plus tard',
+          code: 'timeout-error'
         );
       }
       
       throw AuthException(
-        message: 'Une erreur inattendue est survenue lors de l\'inscription',
+        message: 'Une erreur inattendue est survenue. Veuillez réessayer',
         code: 'unknown-error'
       );
     }
