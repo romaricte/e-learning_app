@@ -18,7 +18,7 @@ final Map<String, String> frFR = {
   // 02 Log In Screen wirh error Screen
   "msg_please_enter_a_valid": "Veuillez entrer une adresse email valide",
   "msg_please_enter_a_valid2": "Veuillez entrer un mot de passe valide",
-
+  "msg_please_enter_a_valid3": "Veuillez entrer un nom et prénom valide",
   // 04 Sign up Screen
   "lbl_full_name": "Nom et prénom",
   "lbl_sign_in": "Connexion",
@@ -35,7 +35,7 @@ final Map<String, String> frFR = {
   "lbl_resend_now": "renvoyer maintenant",
   "lbl_verification": "Vérification",
   "lbl_verify": "Vérifier",
-  "msg_code_sent_to_ro": "Code envoyé à ronaldrichards@gmail.com",
+  "msg_code_sent_to_ro": "Code envoyé à romadevtene@gmail.com",
   "msg_don_t_receive_an": "Ne recevez pas de code ? renvoyer maintenant",
   "msg_don_t_receive_an2": "Ne recevez pas de code ? ",
 

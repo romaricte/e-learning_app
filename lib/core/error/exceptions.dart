@@ -1,4 +1,11 @@
-class ServerException implements Exception {}
+class ServerException implements Exception {
+  final String message;
+
+  ServerException({this.message = 'Une erreur serveur est survenue'});
+
+  @override
+  String toString() => 'ServerException: $message';
+}
 
 class CacheException implements Exception {}
 

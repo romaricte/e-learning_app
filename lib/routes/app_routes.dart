@@ -1,6 +1,16 @@
 
-import 'package:e_learning/presentation/log_in_screen/binding/log_in_binding.dart';
-import 'package:e_learning/presentation/log_in_screen/log_in_screen.dart';
+import 'package:e_learning/presentation/auth/forgot_password_screen/binding/forgot_password_binding.dart';
+import 'package:e_learning/presentation/auth/forgot_password_screen/forgot_password_screen.dart';
+import 'package:e_learning/presentation/auth/log_in_screen/binding/log_in_binding.dart';
+import 'package:e_learning/presentation/auth/log_in_screen/log_in_screen.dart';
+import 'package:e_learning/presentation/auth/reset_password_screen/binding/reset_password_binding.dart';
+import 'package:e_learning/presentation/auth/reset_password_screen/reset_password_screen.dart';
+import 'package:e_learning/presentation/auth/reset_password_success_screen/binding/reset_password_success_binding.dart';
+import 'package:e_learning/presentation/auth/reset_password_success_screen/reset_password_success_screen.dart';
+import 'package:e_learning/presentation/auth/sign_up_screen/binding/sign_up_binding.dart';
+import 'package:e_learning/presentation/auth/sign_up_screen/sign_up_screen.dart';
+import 'package:e_learning/presentation/auth/verification_screen/binding/verification_binding.dart';
+import 'package:e_learning/presentation/auth/verification_screen/verification_screen.dart';
 import 'package:e_learning/presentation/onboarding1_screen/binding/onboarding1_binding.dart';
 import 'package:e_learning/presentation/onboarding1_screen/onboarding1_screen.dart';
 import 'package:e_learning/presentation/onboarding_screen/binding/onboarding_binding.dart';
@@ -27,16 +37,16 @@ class AppRoutes {
   // static const String logInScreenWithActiveScreen =
   //     '/log_in_screen_with_active_screen';
 
-  // static const String signUpScreen = '/sign_up_screen';
+  static const String signUpScreen = '/sign_up_screen';
 
-  // static const String forgotPasswordScreen = '/forgot_password_screen';
+  static const String forgotPasswordScreen = '/forgot_password_screen';
 
-  // static const String verificationScreen = '/verification_screen';
+  static const String verificationScreen = '/verification_screen';
 
-  // static const String resetPasswordScreen = '/reset_password_screen';
+  static const String resetPasswordScreen = '/reset_password_screen';
 
-  // static const String resetPasswordSuccessScreen =
-  //     '/reset_password_success_screen';
+  static const String resetPasswordSuccessScreen =
+      '/reset_password_success_screen';
 
   // static const String homeScreenPage = '/home_screen_page';
 
@@ -182,46 +192,46 @@ class AppRoutes {
     //     LogInScreenWithActiveBinding(),
     //   ],
     // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: signUpScreen,
-    //   page: () => SignUpScreen(),
-    //   bindings: [
-    //     SignUpBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: forgotPasswordScreen,
-    //   page: () => ForgotPasswordScreen(),
-    //   bindings: [
-    //     ForgotPasswordBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: verificationScreen,
-    //   page: () => VerificationScreen(),
-    //   bindings: [
-    //     VerificationBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: resetPasswordScreen,
-    //   page: () => ResetPasswordScreen(),
-    //   bindings: [
-    //     ResetPasswordBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: resetPasswordSuccessScreen,
-    //   page: () => ResetPasswordSuccessScreen(),
-    //   bindings: [
-    //     ResetPasswordSuccessBinding(),
-    //   ],
-    // ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: signUpScreen,
+      page: () => const SignUpScreen(),
+      bindings: [
+        SignUpBinding(),
+      ],
+    ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: forgotPasswordScreen,
+      page: () => const ForgotPasswordScreen(),
+      bindings: [
+        ForgotPasswordBinding(),
+      ],
+    ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: verificationScreen,
+      page: () => const VerificationScreen(),
+      bindings: [
+        VerificationBinding(),
+      ],
+    ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: resetPasswordScreen,
+      page: () => const ResetPasswordScreen(),
+      bindings: [
+        ResetPasswordBinding(),
+      ],
+    ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: resetPasswordSuccessScreen,
+      page: () => const ResetPasswordSuccessScreen(),
+      bindings: [
+        ResetPasswordSuccessBinding(),
+      ],
+    ),
     // GetPage(
     //   transition: Transition.rightToLeft,
     //   name: homeScreenContainerScreen,

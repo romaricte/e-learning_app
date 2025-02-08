@@ -7,18 +7,20 @@ import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:get/get.dart';
 import 'package:e_learning/localization/app_localization.dart';
+import 'package:e_learning/core/config/supabase_config.dart';
 
-void main() {
-
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-   SystemChrome.setPreferredOrientations([
+  
+  // Initialiser Supabase
+  await SupabaseConfig.initialize();
+  
+  SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]).then((value) {
     Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
     runApp(MyApp());
   });
-  runApp( MyApp());
-
 }
 
 class MyApp extends StatelessWidget {

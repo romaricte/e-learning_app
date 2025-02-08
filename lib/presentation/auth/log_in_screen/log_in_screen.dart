@@ -113,7 +113,7 @@ class _LogInScreenState extends State<LogInScreen> {
  /// Section Widget
  Widget _buildEmailField() {
   return CustomTextFormField(
-      controller: controller.emailFieldController,
+      controller: controller.emailController,
       hintText: "msg_enter_your_email".tr,
       textInputType: TextInputType.emailAddress,
       validator: (value) {
@@ -133,10 +133,11 @@ class _LogInScreenState extends State<LogInScreen> {
   ]);
  }
 
+
  /// Section Widget
  Widget _buildPasswordField() {
   return Obx(() => CustomTextFormField(
-      controller: controller.passwordFieldController,
+      controller: controller.passwordController,
       hintText: "msg_enter_your_password".tr,
       textInputAction: TextInputAction.done,
       textInputType: TextInputType.visiblePassword,
@@ -254,9 +255,9 @@ class _LogInScreenState extends State<LogInScreen> {
 
  /// Navigates to the forgotPasswordScreen when the action is triggered.
  onTapTxtForgotPassword() {
-  // Get.toNamed(
-  //  AppRoutes.forgotPasswordScreen,
-  // );
+  Get.toNamed(
+   AppRoutes.forgotPasswordScreen,
+  );
  }
 
  /// Navigates to the homeScreenContainerScreen when the action is triggered.
@@ -282,9 +283,9 @@ class _LogInScreenState extends State<LogInScreen> {
 
  /// Navigates to the signUpScreen when the action is triggered.
  onTapTxtDonthaveanaccount() {
-  // Get.toNamed(
-  //  AppRoutes.signUpScreen,
-  // );
+  Get.toNamed(
+   AppRoutes.signUpScreen,
+  );
  }
  }
 
