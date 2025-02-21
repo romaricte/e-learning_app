@@ -171,8 +171,8 @@ class _HomeScreenContainerScreenState extends State<HomeScreenContainerScreen> {
     return Favorite1Page();
    case AppRoutes.chatsPage:
     return ChatsPage();
-   case AppRoutes.profileTabContainerPage:
-    return ProfileTabContainerPage();
+  //  case AppRoutes.profileTabContainerPage:
+  //   return ProfileTabContainerPage();
    default:
     return DefaultWidget();
   }

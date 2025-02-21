@@ -262,9 +262,9 @@ class _LogInScreenState extends State<LogInScreen> {
 
  /// Navigates to the homeScreenContainerScreen when the action is triggered.
  onTapLoginButton() {
-  // Get.toNamed(
-  //  AppRoutes.homeScreenContainerScreen,
-  // );
+  Get.toNamed(
+   AppRoutes.homeScreenContainerScreen,
+  );
  }
 
  /// Navigates to the homeScreenContainerScreen when the action is triggered.

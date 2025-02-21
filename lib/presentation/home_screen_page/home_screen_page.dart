@@ -1,6 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_learning/presentation/categories_screen/controller/categories_controller.dart';
+import 'package:e_learning/presentation/categories_screen/models/categoriesgrid_item_model.dart';
 import 'package:e_learning/presentation/featured_course_screen/controller/featured_course_controller.dart';
+import 'package:e_learning/presentation/featured_course_screen/models/favoritegrid_item_model.dart';
+import 'package:e_learning/presentation/featured_course_screen/widgets/favoritegrid_item_widget.dart';
 import 'package:e_learning/routes/app_routes.dart';
 import 'package:e_learning/theme/custom_text_style.dart';
 import 'package:e_learning/widgets/app_bar/appbar_trailing_iconbutton.dart';
@@ -37,9 +40,9 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
   CategoriesController categoriesController = Get.put(CategoriesController());
   FeaturedCourseController featuredCourseController =
       Get.put(FeaturedCourseController());
-  PopularInstructorController popularInstructorController =
-      Get.put(PopularInstructorController());
-  PopularCoursesController popularCoursesController = Get.put(PopularCoursesController());
+  // PopularInstructorController popularInstructorController =
+  //     Get.put(PopularInstructorController());
+  // PopularCoursesController popularCoursesController = Get.put(PopularCoursesController());
 
   @override
   Widget build(BuildContext context) {
@@ -293,7 +296,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                          return animationfunction(
                              index,
                              FavoritegridItemWidget(model, onTapFund: () {
-                               Get.toNamed(AppRoutes.courseDetailsAboutScreen);
+                               // Get.toNamed(AppRoutes.courseDetailsAboutScreen);
                              }));
                        })),
                SizedBox(height: 16.v),
@@ -321,67 +324,67 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                  scrollDirection: Axis.horizontal,
                  child: Padding(
                    padding:  EdgeInsets.symmetric(horizontal: 8.h,vertical: 16.v),
-                   child: Row(
-                     children: List.generate(
-                         popularInstructorController.populerInstructor.length > 3
-                             ? 3
-                             : popularInstructorController.populerInstructor.length,
-                             (index) {
-                           RonaldrichardsItemModel data = popularInstructorController.populerInstructor[index];
-                           return animationfunction(index, Padding(
-                             padding:  EdgeInsets.only(left: 8.h,right: 8.h),
-                             child: GestureDetector(
-                               onTap: (){
-                                //  Get.toNamed(AppRoutes.instructorDetailsScreen);
-                               },
-                               child: Container(
-                                 height: 65.v,
-                                 width: 173.h,
-                                 decoration: AppDecoration.fillGray.copyWith(
-                                   borderRadius: BorderRadiusStyle.roundedBorder12,
-                                 ),
-                                 child: Padding(
-                                   padding:  EdgeInsets.all(12.h),
-                                   child: Row(
-                                     crossAxisAlignment: CrossAxisAlignment.center,
-                                     children: [
-                                       CustomImageView(
-                                         height: 39.adaptSize,
-                                         width: 39.adaptSize,
-                                         imagePath: data.userImage!,
+                  //  child: Row(
+                    //  children: List.generate(
+                    //      popularInstructorController.populerInstructor.length > 3
+                    //          ? 3
+                    //          : popularInstructorController.populerInstructor.length,
+                    //          (index) {
+                    //        RonaldrichardsItemModel data = popularInstructorController.populerInstructor[index];
+                    //        return animationfunction(index, Padding(
+                    //          padding:  EdgeInsets.only(left: 8.h,right: 8.h),
+                    //          child: GestureDetector(
+                    //            onTap: (){
+                    //             //  Get.toNamed(AppRoutes.instructorDetailsScreen);
+                    //            },
+                    //            child: Container(
+                    //              height: 65.v,
+                    //              width: 173.h,
+                    //              decoration: AppDecoration.fillGray.copyWith(
+                    //                borderRadius: BorderRadiusStyle.roundedBorder12,
+                    //              ),
+                    //              child: Padding(
+                    //                padding:  EdgeInsets.all(12.h),
+                    //                child: Row(
+                    //                  crossAxisAlignment: CrossAxisAlignment.center,
+                    //                  children: [
+                    //                    CustomImageView(
+                    //                      height: 39.adaptSize,
+                    //                      width: 39.adaptSize,
+                    //                      imagePath: data.userImage!,
 
-                                       ),
-                                       SizedBox(width: 6.h),
-                                       Expanded(
-                                         child: Column(
-                                           crossAxisAlignment: CrossAxisAlignment.start,
-                                           children: [
-                                             Text(
-                                               data.userName!,
-                                               style: theme.textTheme.titleSmall!.copyWith(
-                                                 color: appTheme.black900,
-                                               ),
-                                             ),
-                                             SizedBox(height: 4.v),
-                                             Expanded(
-                                               child: Text(
-                                                   data.userType!,
-                                                   style: theme.textTheme.bodySmall!.copyWith(
-                                                     color: appTheme.black900,
-                                                   )
-                                               ),
-                                             ),
-                                           ],
-                                         ),
-                                       )
-                                     ],
-                                   ),
-                                 ),
-                               ),
-                             ),
-                           ));
-                         }),
-                   ),
+                    //                    ),
+                    //                    SizedBox(width: 6.h),
+                    //                    Expanded(
+                    //                      child: Column(
+                    //                        crossAxisAlignment: CrossAxisAlignment.start,
+                    //                        children: [
+                    //                          Text(
+                    //                            data.userName!,
+                    //                            style: theme.textTheme.titleSmall!.copyWith(
+                    //                              color: appTheme.black900,
+                    //                            ),
+                    //                          ),
+                    //                          SizedBox(height: 4.v),
+                    //                          Expanded(
+                    //                            child: Text(
+                    //                                data.userType!,
+                    //                                style: theme.textTheme.bodySmall!.copyWith(
+                    //                                  color: appTheme.black900,
+                    //                                )
+                    //                            ),
+                    //                          ),
+                    //                        ],
+                    //                      ),
+                    //                    )
+                    //                  ],
+                    //                ),
+                    //              ),
+                    //            ),
+                    //          ),
+                    //        ));
+                    //      }),
+                  //  ),
                  ),
                ),
                Padding(
@@ -404,20 +407,20 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                    ],
                  ),
                ),
-               ListView.builder(
-                 padding: EdgeInsets.symmetric(horizontal: 16.h,vertical: 8.v),
-                   physics: NeverScrollableScrollPhysics(),
-                 primary: false,
-                   shrinkWrap: true,
-                   itemCount: popularCoursesController.getPopulerCource.length>2?2:popularCoursesController.getPopulerCource.length,
-                   itemBuilder: (context, index) {
-                     LearnnewskillslistItemModel model = popularCoursesController
-                         .getPopulerCource[index];
-                     return animationfunction(index, Padding(
-                       padding:  EdgeInsets.symmetric(vertical: 8.v),
-                       child: LearnnewskillslistItemWidget(model),
-                     ));
-                   })
+              //  ListView.builder(
+              //    padding: EdgeInsets.symmetric(horizontal: 16.h,vertical: 8.v),
+              //      physics: NeverScrollableScrollPhysics(),
+              //    primary: false,
+              //      shrinkWrap: true,
+              //      itemCount: popularCoursesController.getPopulerCource.length>2?2:popularCoursesController.getPopulerCource.length,
+              //      itemBuilder: (context, index) {
+              //        LearnnewskillslistItemModel model = popularCoursesController
+              //            .getPopulerCource[index];
+              //        return animationfunction(index, Padding(
+              //          padding:  EdgeInsets.symmetric(vertical: 8.v),
+              //          child: LearnnewskillslistItemWidget(model),
+              //        ));
+              //      })
              ],
            ),
          ),
@@ -482,8 +485,8 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
 
   /// Navigates to the popularCoursesScreen when the action is triggered.
   onTapTxtViewAll2() {
-    Get.toNamed(
-      AppRoutes.popularCoursesScreen,
-    );
+      // Get.toNamed(
+      //   AppRoutes.popularCoursesScreen,
+      // );
   }
 }
