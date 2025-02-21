@@ -11,10 +11,20 @@ import 'package:e_learning/presentation/auth/sign_up_screen/binding/sign_up_bind
 import 'package:e_learning/presentation/auth/sign_up_screen/sign_up_screen.dart';
 import 'package:e_learning/presentation/auth/verification_screen/binding/verification_binding.dart';
 import 'package:e_learning/presentation/auth/verification_screen/verification_screen.dart';
+import 'package:e_learning/presentation/chat_list_tab_container_screen/binding/chat_list_tab_container_binding.dart';
+import 'package:e_learning/presentation/chat_list_tab_container_screen/chat_list_tab_container_screen.dart';
+import 'package:e_learning/presentation/favorite_screen/binding/favorite_binding.dart';
+import 'package:e_learning/presentation/favorite_screen/favorite_screen.dart';
+import 'package:e_learning/presentation/featured_course_screen/binding/featured_course_binding.dart';
+import 'package:e_learning/presentation/featured_course_screen/featured_course_screen.dart';
+import 'package:e_learning/presentation/home_screen_container_screen/binding/home_screen_container_binding.dart';
+import 'package:e_learning/presentation/home_screen_container_screen/home_screen_container_screen.dart';
 import 'package:e_learning/presentation/onboarding1_screen/binding/onboarding1_binding.dart';
 import 'package:e_learning/presentation/onboarding1_screen/onboarding1_screen.dart';
 import 'package:e_learning/presentation/onboarding_screen/binding/onboarding_binding.dart';
 import 'package:e_learning/presentation/onboarding_screen/onboarding_screen.dart';
+import 'package:e_learning/presentation/search_screen/binding/search_binding.dart';
+import 'package:e_learning/presentation/search_screen/search_screen.dart';
 import 'package:e_learning/presentation/splash_screen/binding/splash_binding.dart';
 import 'package:e_learning/presentation/splash_screen/splash_screen.dart';
 import 'package:get/get.dart';
@@ -50,12 +60,12 @@ class AppRoutes {
 
   // static const String homeScreenPage = '/home_screen_page';
 
-  // static const String homeScreenContainerScreen =
-  //     '/home_screen_container_screen';
+  static const String homeScreenContainerScreen =
+      '/home_screen_container_screen';
 
-  // static const String categoriesScreen = '/categories_screen';
+  static const String categoriesScreen = '/categories_screen';
 
-  // static const String featuredCourseScreen = '/featured_course_screen';
+  static const String featuredCourseScreen = '/featured_course_screen';
 
   // static const String popularCoursesScreen = '/popular_courses_screen';
 
@@ -85,17 +95,17 @@ class AppRoutes {
 
   // static const String myCoursesScreen = '/my_courses_screen';
 
-  // static const String myCourses1Page = '/my_courses1_page';
+  static const String myCourses1Page = '/my_courses1_page';
 
   // static const String courseDetailsScreen = '/course_details_screen';
 
-  // static const String favoriteScreen = '/favorite_screen';
+  static const String favoriteScreen = '/favorite_screen';
 
   // static const String favorite1Page = '/favorite1_page';
 
-  // static const String chatsPage = '/chats_page';
+  static const String chatsPage = '/chats_page';
 
-  // static const String chatListPage = '/chat_list_page';
+  static const String chatListPage = '/chat_list_page';
 
   // static const String chatListTabContainerScreen =
   //     '/chat_list_tab_container_screen';
@@ -232,14 +242,14 @@ class AppRoutes {
         ResetPasswordSuccessBinding(),
       ],
     ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: homeScreenContainerScreen,
-    //   page: () => HomeScreenContainerScreen(),
-    //   bindings: [
-    //     HomeScreenContainerBinding(),
-    //   ],
-    // ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: homeScreenContainerScreen,
+      page: () => HomeScreenContainerScreen(),
+      bindings: [
+        HomeScreenContainerBinding(),
+      ],
+    ),
     // GetPage(
     //   transition: Transition.rightToLeft,
     //   name: categoriesScreen,
@@ -248,14 +258,14 @@ class AppRoutes {
     //     CategoriesBinding(),
     //   ],
     // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: featuredCourseScreen,
-    //   page: () => FeaturedCourseScreen(),
-    //   bindings: [
-    //     FeaturedCourseBinding(),
-    //   ],
-    // ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: featuredCourseScreen,
+      page: () => FeaturedCourseScreen(),
+      bindings: [
+        FeaturedCourseBinding(),
+      ],
+    ),
     // GetPage(
     //   transition: Transition.rightToLeft,
     //   name: popularCoursesScreen,
@@ -320,14 +330,14 @@ class AppRoutes {
     //     BookSuccessBinding(),
     //   ],
     // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: searchScreen,
-    //   page: () => SearchScreen(),
-    //   bindings: [
-    //     SearchBinding(),
-    //   ],
-    // ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: searchScreen,
+      page: () => SearchScreen(),
+      bindings: [
+        SearchBinding(),
+      ],
+    ),
     // GetPage(
     //   transition: Transition.rightToLeft,
     //   name: resultFoundScreen,
@@ -376,22 +386,22 @@ class AppRoutes {
     //     CourseDetailsBinding(),
     //   ],
     // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: favoriteScreen,
-    //   page: () => FavoriteScreen(),
-    //   bindings: [
-    //     FavoriteBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   transition: Transition.rightToLeft,
-    //   name: chatListTabContainerScreen,
-    //   page: () => ChatListTabContainerScreen(),
-    //   bindings: [
-    //     ChatListTabContainerBinding(),
-    //   ],
-    // ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: favoriteScreen,
+      page: () => FavoriteScreen(),
+      bindings: [
+        FavoriteBinding(),
+      ],
+    ),
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: chatListTabContainerScreen,
+      page: () => ChatListTabContainerScreen(),
+      bindings: [
+        ChatListTabContainerBinding(),
+      ],
+    ),
     // GetPage(
     //   transition: Transition.rightToLeft,
     //   name: chatDetailsScreen,

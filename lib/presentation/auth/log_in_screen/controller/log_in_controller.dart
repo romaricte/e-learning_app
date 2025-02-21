@@ -26,7 +26,7 @@ class LogInController extends GetxController {
         email: emailController.text,
         password: passwordController.text,
       );
-      // Get.toNamed(AppRoutes.homeScreenContainerScreen); // Rediriger vers la page d'accueil
+      Get.toNamed(AppRoutes.homeScreenContainerScreen); // Rediriger vers la page d'accueil
     } catch (e) {
       Get.snackbar(
         'Erreur',
